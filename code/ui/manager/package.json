@@ -85,6 +85,7 @@
     "@storybook/test": "workspace:*",
     "@storybook/theming": "workspace:*",
     "@storybook/types": "workspace:*",
+    "@tanstack/react-virtual": "^3.3.0",
     "@testing-library/react": "^11.2.2",
     "@types/react-transition-group": "^4",
     "@types/semver": "^7.3.4",
@@ -108,7 +109,8 @@
     "semver": "^7.3.7",
     "store2": "^2.14.2",
     "ts-dedent": "^2.0.0",
-    "typescript": "^5.3.2"
+    "typescript": "^5.3.2",
+    "use-debounce": "^10.0.0"
   },
   "publishConfig": {
     "access": "public"

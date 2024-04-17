@@ -38,11 +38,14 @@ export async function searchFiles({
         ];
 
   const entries = await globby(globbedSearchQuery, {
-    ignore: ['**/node_modules/**', '**/*.spec.*', '**/*.test.*'],
+    ignore: ['**/node_modules/**', '**/*.spec.*', '**/*.test.*', '**/*.stories.*'],
     gitignore: true,
+    caseSensitiveMatch: false,
     cwd,
     objectMode: true,
   });
 
-  return entries.map((entry) => entry.path);
+  return entries
+    .map((entry) => entry.path)
+    .filter((entry) => fileExtensions.some((ext) => entry.endsWith(`.${ext}`)));
 }

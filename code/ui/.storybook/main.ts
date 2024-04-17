@@ -57,7 +57,7 @@ const config: StorybookConfig = {
     '@storybook/addon-storysource',
     '@storybook/addon-designs',
     '@storybook/addon-a11y',
-    '@chromatic-com/storybook',
+    // '@chromatic-com/storybook',
   ],
   build: {
     test: {
